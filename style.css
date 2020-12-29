@@ -96,7 +96,18 @@ body {
   background-position: bottom;
   transform: translateX(100%);
   background-image: url(./static/cow.svg);
-  animation: slide_left 5.8s ease 6.8s none;
+  animation: slide_left_stop_center 6.8s ease 6.8s forwards;
+}
+.mochi {
+  position: absolute;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.mochi div:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  background-color: #6ad5ff;
 }
 
 /*** animation ***/
@@ -121,6 +132,20 @@ body {
     transform: translateX(100%);
   }
   to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide_left_stop_center {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  100% {
     transform: translateX(-100%);
   }
 }
