@@ -107,23 +107,53 @@ body {
 .mochi div:nth-child(1) {
   background-color: #ff9900;
   border-radius: 50%;
-  transform: translateY(-150%) translateX(-50%);
+  transform: translateY(1000%) translateX(-50%);
   width: 10rem;
   height: 10rem;
+  animation-fill-mode: forwards;
+  animation: mochi_one 1s ease 12.4s forwards;
+}
+@keyframes mochi_one {
+  from {
+    transform: translateY(-1000%) translateX(-50%);
+  }
+  to {
+    transform: translateY(-150%) translateX(-50%);
+  }
 }
 .mochi div:nth-child(2) {
   background-color: #ffffff;
   border-radius: 100px 100px 100px 100px;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-1000%) translateX(-50%);
   width: 30rem;
   height: 10rem;
+  animation-fill-mode: forwards;
+  animation: mochi_two 1s ease 12.3s forwards;
+}
+@keyframes mochi_two {
+  from {
+    transform: translateY(-1000%) translateX(-50%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%);
+  }
 }
 .mochi div:nth-child(3) {
   background-color: #ffffff;
   border-radius: 100px 100px 100px 100px;
-  transform: translateY(50%) translateX(-50%);
+  transform: translateY(-1000%) translateX(-50%);
   width: 40rem;
   height: 10rem;
+  animation-fill-mode: forwards;
+  animation: mochi_three 1s ease 12.2s forwards;
+}
+@keyframes mochi_three {
+  from {
+    transform: translateY(-1000%) translateX(-50%);
+  }
+  to {
+    transform: translateY(50%) translateX(-50%);
+  }
 }
 
 /*** animation ***/
