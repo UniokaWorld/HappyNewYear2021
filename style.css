@@ -5,16 +5,59 @@ body {
 }
 
 #stage {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100vh;
 }
 
 /*** 共通 ***/
-.type_one {
+.type_one,
+.type_one div {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/*** type_one ***/
+.type_one div:nth-child(1) {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0) translateY(-100%) rotate(30deg);
+  background-color: #6ad5ff;
+}
+.type_one div:nth-child(2) {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: translateY(100%);
+  background-image: url(./static/fuji.svg);
+}
+
+.type_one div:nth-child(1) {
+  animation: side 0.8s ease 0.5s forwards;
+}
+.type_one div:nth-child(2) {
+  animation: slide_up 0.8s ease 1.5s forwards;
+}
+
+@keyframes side {
+  from {
+    transform: translateY(-100%) rotate(30deg);
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+@keyframes slide_up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
