@@ -5,16 +5,116 @@ body {
 }
 
 #stage {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100vh;
 }
 
 /*** 共通 ***/
-.type_one {
+.type_one,
+.type_one div,
+.type_one_to_two,
+.type_one_to_two div {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/*** type_one ***/
+.type_one div:nth-child(1) {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0) translateY(-100%) rotate(30deg);
+  background-color: #6ad5ff;
+}
+.type_one div:nth-child(3) {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: translateY(100%);
+  background-image: url(./static/fuji.svg);
+}
+.type_one div:nth-child(2) {
+  position: absolute;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: translateX(100%);
+  background-image: url(./static/kumo.svg);
+}
+.type_one div:nth-child(4) {
+  position: absolute;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: translateX(100%);
+  background-image: url(./static/kumo.svg);
+}
+
+.type_one div:nth-child(1) {
+  animation: side 0.8s ease 0.5s forwards;
+}
+.type_one div:nth-child(3) {
+  animation: slide_up 0.8s ease 1.5s forwards;
+}
+.type_one div:nth-child(2) {
+  animation: slide_left 4.8s ease 2.5s none;
+}
+.type_one div:nth-child(4) {
+  animation: slide_left 4.8s ease 1.8s none;
+}
+
+@keyframes side {
+  from {
+    transform: translateY(-100%) rotate(30deg);
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+@keyframes slide_up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide_left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*** type_one_to_two　***/
+.type_one_to_two div {
+  transform: scale(0);
+}
+.type_one_to_two div:nth-child(1) {
+  background-color: #e7babb;
+  animation: scale 0.8s ease 5.8s forwards;
+}
+.type_one_to_two div:nth-child(2) {
+  background-color: #accce5;
+  animation: scale 0.8s ease 6.1s forwards;
+}
+.type_one_to_two div:nth-child(3) {
+  background-color: #f4dfa3;
+  animation: scale 0.8s ease 6.4s forwards;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
