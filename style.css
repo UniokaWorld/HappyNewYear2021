@@ -14,7 +14,9 @@ body {
 .type_one,
 .type_one div,
 .type_one_to_two,
-.type_one_to_two div {
+.type_one_to_two div,
+.type_two,
+.type_two div {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,6 +71,35 @@ body {
   animation: slide_left 4.8s ease 1.8s none;
 }
 
+/*** type_one_to_two　***/
+.type_one_to_two div {
+  transform: scale(0);
+}
+.type_one_to_two div:nth-child(1) {
+  background-color: #e7babb;
+  animation: scale 0.8s ease 5.8s forwards;
+}
+.type_one_to_two div:nth-child(2) {
+  background-color: #accce5;
+  animation: scale 0.8s ease 6.1s forwards;
+}
+.type_one_to_two div:nth-child(3) {
+  background-color: #f4dfa3;
+  animation: scale 0.8s ease 6.4s forwards;
+}
+
+/*** type_two ***/
+.type_two div:nth-child(1) {
+  position: absolute;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: translateX(100%);
+  background-image: url(./static/cow.svg);
+  animation: slide_left 5.8s ease 6.8s none;
+}
+
+/*** animation ***/
 @keyframes side {
   from {
     transform: translateY(-100%) rotate(30deg);
@@ -92,23 +123,6 @@ body {
   to {
     transform: translateX(-100%);
   }
-}
-
-/*** type_one_to_two　***/
-.type_one_to_two div {
-  transform: scale(0);
-}
-.type_one_to_two div:nth-child(1) {
-  background-color: #e7babb;
-  animation: scale 0.8s ease 5.8s forwards;
-}
-.type_one_to_two div:nth-child(2) {
-  background-color: #accce5;
-  animation: scale 0.8s ease 6.1s forwards;
-}
-.type_one_to_two div:nth-child(3) {
-  background-color: #f4dfa3;
-  animation: scale 0.8s ease 6.4s forwards;
 }
 @keyframes scale {
   from {
