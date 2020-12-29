@@ -12,7 +12,9 @@ body {
 
 /*** 共通 ***/
 .type_one,
-.type_one div {
+.type_one div,
+.type_one_to_two,
+.type_one_to_two div {
   position: absolute;
   top: 0;
   left: 0;
@@ -89,5 +91,30 @@ body {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+/*** type_one_to_two　***/
+.type_one_to_two div {
+  transform: scale(0);
+}
+.type_one_to_two div:nth-child(1) {
+  background-color: #e7babb;
+  animation: scale 0.8s ease 5.8s forwards;
+}
+.type_one_to_two div:nth-child(2) {
+  background-color: #accce5;
+  animation: scale 0.8s ease 6.1s forwards;
+}
+.type_one_to_two div:nth-child(3) {
+  background-color: #f4dfa3;
+  animation: scale 0.8s ease 6.4s forwards;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
