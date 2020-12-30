@@ -238,13 +238,6 @@ body {
 }
 .home div:nth-child(5) {
   position: absolute;
-  background-size: 40rem;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-image: url(./static/ore.png);
-}
-.home div:nth-child(6) {
-  position: absolute;
   top: 50%;
   left: 50%;
   background-size: 10rem;
