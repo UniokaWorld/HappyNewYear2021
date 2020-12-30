@@ -18,7 +18,9 @@ body {
 .type_two,
 .type_two div,
 .mochi,
-.mochi div {
+.mochi div,
+.type_two_to_home,
+.type_two_to_home div {
   position: absolute;
   top: 0;
   left: 0;
@@ -158,6 +160,38 @@ body {
   }
 }
 
+/*** type_two_to_home ***/
+.type_two_to_home div {
+  transform: scale(0);
+}
+.type_two_to_home div:nth-child(2n - 1) {
+  transform-origin: bottom right;
+  transform: translateY(-100%) rotate(30deg);
+}
+.type_two_to_home div:nth-child(2n) {
+  transform-origin: bottom left;
+  transform: translateY(-100%) rotate(-30deg);
+}
+.type_two_to_home div:nth-child(1) {
+  background-color: #d6a3f4;
+}
+.type_two_to_home div:nth-child(2) {
+  background-color: #e7babb;
+}
+.type_two_to_home div:nth-child(3) {
+  background-color: #accce5;
+}
+
+.type_two_to_home div:nth-child(1) {
+  animation: fall_1 0.8s ease 14.2s forwards;
+}
+.type_two_to_home div:nth-child(2) {
+  animation: fall_2 0.8s ease 14.4s forwards;
+}
+.type_two_to_home div:nth-child(3) {
+  animation: fall_1 0.8s ease 14.6s forwards;
+}
+
 /*** animation ***/
 @keyframes side {
   from {
@@ -203,5 +237,21 @@ body {
   }
   to {
     transform: scale(1);
+  }
+}
+@keyframes fall_1 {
+  from {
+    transform: translateY(-100%) rotate(30deg);
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
+  }
+}
+@keyframes fall_2 {
+  from {
+    transform: translateY(-100%) rotate(-30deg);
+  }
+  to {
+    transform: translateY(0%) rotate(0deg);
   }
 }
