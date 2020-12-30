@@ -211,14 +211,39 @@ body {
   transform: translateX(-20%);
   background-image: url(./static/fuji.svg);
 }
+.home div:nth-child(2),
+.home div:nth-child(3),
+.home div:nth-child(4) {
+  position: absolute;
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-image: url(./static/cow.svg);
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
 .home div:nth-child(2) {
+  animation-name: slide_left;
+  animation-duration: 2s;
+  transform: translateY(30%);
+}
+.home div:nth-child(3) {
+  animation-name: slide_left_two;
+  animation-duration: 4s;
+  transform: translateY(30%);
+}
+.home div:nth-child(4) {
+  animation-name: slide_left_three;
+  animation-duration: 3s;
+  transform: translateY(60%);
+}
+.home div:nth-child(5) {
   position: absolute;
   background-size: 40rem;
   background-repeat: no-repeat;
   background-position: bottom;
   background-image: url(./static/ore.png);
 }
-.home div:nth-child(3) {
+.home div:nth-child(6) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -226,6 +251,23 @@ body {
   background-repeat: no-repeat;
   transform: translateX(30%) translateY(-48%);
   background-image: url(./static/kingasinnen.svg);
+}
+
+@keyframes slide_left_two {
+  from {
+    transform: translateX(100%) translateY(30%);
+  }
+  to {
+    transform: translateX(-100%) translateY(30%);
+  }
+}
+@keyframes slide_left_three {
+  from {
+    transform: translateX(100%) translateY(60%);
+  }
+  to {
+    transform: translateX(-100%) translateY(60%);
+  }
 }
 
 /*** animation ***/
