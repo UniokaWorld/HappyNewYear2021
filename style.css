@@ -33,7 +33,7 @@ body {
   height: 100%;
   width: 100%;
   transform: scale(0) translateY(-100%) rotate(30deg);
-  background-color: #6ad5ff;
+  background-color: #7ad9ff;
 }
 .type_one div:nth-child(3) {
   position: absolute;
@@ -100,6 +100,8 @@ body {
   background-image: url(./static/cow.svg);
   animation: slide_left_stop_center 6.8s ease 6.8s forwards;
 }
+
+/*** mochi ***/
 .mochi {
   top: 50%;
   left: 50%;
